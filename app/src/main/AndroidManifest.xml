@@ -16,7 +16,8 @@
         <activity
             android:name=".Activities.MainActivity"
             android:finishOnTaskLaunch="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Activities.FirstLogo"
         android:clearTaskOnLaunch="true"

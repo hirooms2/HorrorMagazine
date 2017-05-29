@@ -44,9 +44,9 @@ public class SetTextView {
     {
 
 
-        toolbar_title = (TextView) activity.findViewById(R.id.main_toolbar_title);
+       // toolbar_title = (TextView) activity.findViewById(R.id.main_toolbar_title);
 
-        toolbar_title.setTypeface(yeonsung);
+//        toolbar_title.setTypeface(yeonsung);
 
         story = (TextView) activity.findViewById(R.id.HOMESTORY);
 

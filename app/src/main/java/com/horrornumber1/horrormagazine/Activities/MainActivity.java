@@ -70,47 +70,47 @@ public class MainActivity extends ActionBarActivity implements  BaseSliderView.O
 
         //************************ NavigationDrawer************************************************
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
-        ab.setDisplayShowCustomEnabled(true);
-        ab.setDisplayShowTitleEnabled(false);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main_drawer);
-
-        toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.open_drawer, R.string.close_drawer);
-        toggle.syncState();
-
-
-        ListView listView2 = (ListView) findViewById(R.id.nav_listView2);
-        final DrawerAdapter drawerAdapter2 = new DrawerAdapter(this, DataHouse.drawerData2);
-        listView2.setAdapter(drawerAdapter2);
-
-        listView2.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i==0) {
-                    Intent intent = new Intent(MainActivity.this, Counsil.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-
-                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main_drawer);
-                    drawer.closeDrawer(GravityCompat.START);
-
-                }
-                //favorite
-                if(i==2) {
-                    Intent intent = new Intent(MainActivity.this, Favorite.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-
-                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main_drawer);
-                    drawer.closeDrawer(GravityCompat.START);
-                }
-            }
-        });
+//        toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        ActionBar ab = getSupportActionBar();
+//        ab.setDisplayHomeAsUpEnabled(true);
+//        ab.setDisplayShowCustomEnabled(true);
+//        ab.setDisplayShowTitleEnabled(false);
+//
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main_drawer);
+//
+//        toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.open_drawer, R.string.close_drawer);
+//        toggle.syncState();
+//
+//
+//        ListView listView2 = (ListView) findViewById(R.id.nav_listView2);
+//        final DrawerAdapter drawerAdapter2 = new DrawerAdapter(this, DataHouse.drawerData2);
+//        listView2.setAdapter(drawerAdapter2);
+//
+//        listView2.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                if(i==0) {
+//                    Intent intent = new Intent(MainActivity.this, Counsil.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//                    startActivity(intent);
+//
+//                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main_drawer);
+//                    drawer.closeDrawer(GravityCompat.START);
+//
+//                }
+//                //favorite
+//                if(i==2) {
+//                    Intent intent = new Intent(MainActivity.this, Favorite.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//                    startActivity(intent);
+//
+//                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main_drawer);
+//                    drawer.closeDrawer(GravityCompat.START);
+//                }
+//            }
+//        });
 
         text = (TextView)findViewById(R.id.HOMESTORY);
         text.setOnClickListener(new View.OnClickListener(){
